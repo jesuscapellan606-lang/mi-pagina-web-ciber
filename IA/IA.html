@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberGuard IA - Mentor de Seguridad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">🛡️</div>
+      <div>
+        <h1>CyberGuard IA</h1>
+        <span>Mentor en Ciberseguridad</span>
+      </div>
+    </header>
+
+    <section class="card chat">
+      <div class="messages" id="chatBox">
+        <div class="msg bot">¡Hola! Soy CyberGuard. ¿En qué área de ciberseguridad quieres profundizar hoy?</div>
+      </div>
+      
+      <div class="controls">
+        <input type="text" id="userInput" placeholder="Pregunta sobre virus, phishing...">
+        <button class="btn primary" onclick="sendMessage()">Enviar</button>
+      </div>
+
+      <div class="extra-controls">
+        <label for="imageInput" class="btn secondary">📷 Analizar Foto IA</label>
+        <input type="file" id="imageInput" onchange="handleImage(event)">
+        <button class="btn secondary" onclick="startTest()">Test de Seguridad</button>
+        <button class="btn danger" onclick="clearChat()">🗑️ Borrar Chat</button>
+        <button class="btn new" onclick="newChat()">➕ Nuevo Chat</button>
+      </div>
+    </section>
+
+    <aside class="side">
+      <div class="panel">
+        <strong>Estado de Conexión</strong>
+        <p id="status">🟢 Sistema Activo</p>
+      </div>
+      <div class="panel">
+  <strong>Fuentes de Conocimiento</strong>
+  <ul>
+    <li>OWASP Top 10</li>
+    <li>NIST Framework</li>
+    <li>TryHackMe Labs</li>
+  </ul>
+
+  <!-- 🔽 AQUÍ PEGAS ESTO -->
+  <div class="qr-section">
+    <p>Escanea para entrar a la página</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://TU-LINK-AQUI" alt="QR">
+  </div>
+
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+:root {      
+  --bg-main: #0a0f14;
+  --bg-secondary: #161b22;
+  --card-bg: #1c2128;
+  --border: #30363d;
+  --accent: #238636;
+  --accent-hover: #2ea043;
+  --text-main: #c9d1d9;
+  --text-muted: #8b949e;      
+}
+
+body {
+  margin: 0; background: var(--bg-main); color: var(--text-main);
+  font-family: 'Segoe UI', sans-serif; display: flex;
+  align-items: center; justify-content: center; min-height: 100vh; padding: 20px;
+}
+
+.container {
+  width: 100%; max-width: 1000px; display: grid;
+  grid-template-columns: 1fr 300px; gap: 20px;
+}
+
+header { grid-column: 1 / -1; display: flex; align-items: center; gap: 15px; }
+
+.logo {
+  width: 50px; height: 50px; background: var(--accent);
+  border-radius: 8px; display: flex; align-items: center;
+  justify-content: center; font-size: 24px;
+}
+
+.card { background: var(--card-bg); border-radius: 12px; padding: 20px; border: 1px solid var(--border); }
+
+.chat { height: 65vh; display: flex; flex-direction: column; }
+
+.messages { flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; padding-bottom: 15px; }
+
+.msg { max-width: 80%; padding: 12px 16px; border-radius: 10px; font-size: 14px; line-height: 1.5; }
+
+.msg.user { align-self: flex-end; background: var(--accent); color: white; }
+
+.msg.bot { align-self: flex-start; background: #30363d; border: 1px solid #444c56; }
+
+.controls { display: flex; gap: 10px; padding-top: 15px; border-top: 1px solid var(--border); }
+
+input[type="text"] {
+  flex: 1; padding: 12px; border-radius: 6px; border: 1px solid var(--border);
+  background: #0d1117; color: white; outline: none;
+}
+
+.extra-controls { margin-top: 15px; display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn { padding: 10px 16px; border-radius: 6px; border: none; cursor: pointer; font-weight: 600; transition: 0.2s; font-size: 13px; }
+
+.primary { background: var(--accent); color: white; }
+.primary:hover { background: var(--accent-hover); }
+
+.secondary { background: #30363d; color: white; }
+.secondary:hover { background: #444c56; }
+
+.danger { background: #6e1a1a; color: #ff8080; }
+.danger:hover { background: #b91c1c; color: white; }
+
+.new { background: #1a3a5c; color: #7dd3fc; }
+.new:hover { background: #1d4ed8; color: white; }
+
+#imageInput { display: none; }
+
+.side { display: flex; flex-direction: column; gap: 15px; }
+
+.panel { background: var(--card-bg); padding: 15px; border-radius: 10px; border: 1px solid var(--border); font-size: 13px; }
+
+@media (max-width: 800px) { .container { grid-template-columns: 1fr; } }
+
+.qr-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.qr-section img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+}          
